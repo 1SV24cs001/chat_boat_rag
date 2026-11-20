@@ -10,14 +10,14 @@ def intiate_rag():
   return load_base("college abhi.pdf")
 
 index,embed_model,chunks = initiate_rag()
- if "chat_hist" not in st.session_state:
-   st.session_state.chat_hist = []
+if "chat_hist" not in st.session_state:
+  st.session_state.chat_hist = []
 
- for qa in st.session_state.char_hist :
-   with st.chat_message(qa["role"]):
-     st.write(qa["content"])
+for qa in st.session_state.chat_hist:
+  with st.chat_message(qa["role"]):
+    st.write(qa["content"])
 
- queation = st.chat_input("Ask anything about SIET college...")
+ question = st.chat_input("Ask anything about SIET college...")
  if question:
   st.session_state.chat_hist.append(
     {"role":"user",content = question})
