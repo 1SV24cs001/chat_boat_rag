@@ -60,7 +60,7 @@ def retrieve_content (question, embed_model, chunks, index, num_chunks=3):
       background += chunks[i] + "\n\n"
   return background
 
-#Ask
+#Ask:
 def ask_rag (question, embed_modul, chunks, index, api_key, num_chunks=3, model_name = "openai/gpt-oss-120b"):
   key = api_key
   if not key:
@@ -69,8 +69,8 @@ def ask_rag (question, embed_modul, chunks, index, api_key, num_chunks=3, model_
   prompt = """ You are an Professional AI Assistant.
   Answer user question using only document backgroUND below .
   do nOt invet or assume facts.
-  if information not available , Simply say "Information misssinfg 
-  documengt backgroundn :""" + background + "user Question " + question + "Answer:"
+  if information not available , simply say "Information Misssing .
+  Document Background :""" + background + "user Question " + question + "Answer:"
   client = Groq(api_key = key)
   response = client.chat.completions.create(
     model = model_name,
