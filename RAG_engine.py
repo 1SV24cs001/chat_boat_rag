@@ -1,7 +1,7 @@
 import faiss
-import nompy as np
+import numpy as np
 from groq import Groq
-from pydf import PDFReader
+from pypdf import PDFReader
 from sentence_transformers import SentenceTransformers
 
 #load pdfs
