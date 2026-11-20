@@ -17,7 +17,7 @@ index,embed_model,chunks = initiate_rag()
    with st.chat_message(qa["role"]):
      st.write(qa["content"])
 
- queation = st.chat_input('Ask anything about SIET college...")
+ queation = st.chat_input("Ask anything about SIET college...")
  if question:
   st.session_state.chat_hist.append(
     {"role":"user",content = question})
