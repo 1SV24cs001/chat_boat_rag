@@ -4,7 +4,7 @@ from rag_engine import load_base, ask_rag
 st.set_page_config(page_title="SIET_Chatbot", layout="centered")
 st.title("Shridevi Institute of Engineering and Technology - ChatBot")
 st.caption("Ask anything about college information....")
-st.caption("Created by Chandrashekar H")
+st.caption("Created by Abhilash V L")
 
 mykey = st.secrets["GROQ_API_KEY"]
 
@@ -12,7 +12,7 @@ mykey = st.secrets["GROQ_API_KEY"]
 # Initialize RAG engine
 @st.cache_resource
 def initiate_rag():
-    return load_base("01_College_Information.pdf")
+    return load_base("college abhi.pdf")
 
 
 # Load index, embedding model and chunks
